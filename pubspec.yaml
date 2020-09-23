@@ -21,8 +21,9 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flutter:
+  flutter: 
     sdk: flutter
+  custom_splash: ^0.0.2
 
 
   # The following adds the Cupertino Icons font to your application.

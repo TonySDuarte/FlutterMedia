@@ -1,32 +1,36 @@
+import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(FlutterMedia());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class FlutterMedia extends StatelessWidget {
+  const FlutterMedia({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    //tela splash
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      home: CustomSplash(
+        backGroundColor: const Color.fromARGB(2, 56, 128, 255),
+        imagePath: 'assets/icon/camera.png',
+        duration: 2000,
+        home: HelloWorld(),
+        type: CustomSplashType.StaticDuration,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class HelloWorld extends StatelessWidget {
+  const HelloWorld({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("Hello World"),
     );
   }
 }
