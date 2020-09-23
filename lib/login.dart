@@ -10,7 +10,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(2, 56, 128, 255),
+        backgroundColor: Color.fromARGB(255, 56, 128, 255),
         body: Padding(
           padding: EdgeInsets.all(15),
           child: Center(
@@ -40,6 +40,19 @@ class _LoginState extends State<Login> {
                   labelStyle: TextStyle(color: Colors.black),
                 ),
               ),
+              Divider(),
+              ButtonTheme(
+                height: 60.0,
+                child: RaisedButton(
+                  onPressed: () => {},
+                  child: Text(
+                    "Entrar",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 56, 128, 255),
+                    ),
+                  ),
+                ),
+              )
             ],
           )),
         ));
