@@ -12,7 +12,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 56, 128, 255),
         body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.all(20),
           child: Center(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
