@@ -23,9 +23,9 @@ class _LoginState extends State<Login> {
                 keyboardType: TextInputType.emailAddress,
                 style: new TextStyle(color: Colors.white, fontSize: 20),
                 decoration: InputDecoration(
-                  focusColor: Colors.white,
+                  focusColor: Colors.black12,
                   labelText: "Email",
-                  labelStyle: TextStyle(color: Colors.black),
+                  labelStyle: TextStyle(color: Colors.white),
                 ),
               ),
               Divider(),
@@ -37,7 +37,7 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   focusColor: Colors.white,
                   labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.black),
+                  labelStyle: TextStyle(color: Colors.white),
                 ),
               ),
               Divider(),
@@ -48,7 +48,8 @@ class _LoginState extends State<Login> {
                   child: Text(
                     "Entrar",
                     style: TextStyle(
-                      color: Color.fromARGB(255, 56, 128, 255),
+                      color: Colors.white,
+                      fontSize: 30,
                     ),
                   ),
                 ),
