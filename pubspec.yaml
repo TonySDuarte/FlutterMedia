@@ -28,7 +28,10 @@ flutter:
 
   assets:
     - assets/icon/camera.png
+    - assets/icon/unlock.png
     - assets/img/slide-rescar.png
     - assets/img/slide-ddd.png
     - assets/img/slide-flutter.png
     - assets/img/slide-pronto.png
+    # indicando pasta de imagens 
+
