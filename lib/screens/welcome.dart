@@ -9,7 +9,7 @@ class WelcomeScreen extends StatelessWidget {
   WelcomeScreen({Key key}) : super(key: key);
 
   void navegarParaLogin(BuildContext context) {
-    Navigator.pushReplacementNamed(context, '/login33');
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override

@@ -1,7 +1,8 @@
 import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
-// import 'package:FlutterMedia/login.dart';
+import 'package:FlutterMedia/login.dart';
 import 'package:FlutterMedia/screens/welcome.dart';
+import 'package:FlutterMedia/screens/camera.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -22,11 +23,16 @@ class RouterGenerator {
           builder: (context) => WelcomeScreen(),
         );
 
-      // *ROTA PARA A PAGINA DE LOGIN
-      // case '/login':
+      // case '/camera':
       //   return MaterialPageRoute<dynamic>(
-      //     builder: (context) => Login(),
+      //     builder: (context) => CameraApp(),
       //   );
+
+      // *ROTA PARA A PAGINA DE LOGIN
+      case '/login':
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => Login(),
+        );
       default:
         return _erroRoute();
     }
