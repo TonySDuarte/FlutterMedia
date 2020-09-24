@@ -18,6 +18,7 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Image.asset('assets/icon/unlock.png'),
               TextFormField(
                 autofocus: true,
                 keyboardType: TextInputType.emailAddress,

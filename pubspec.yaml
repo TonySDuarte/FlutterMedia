@@ -25,4 +25,5 @@ flutter:
 
   assets:
       - assets/icon/camera.png # indicando pasta de imagens 
+      - assets/icon/unlock.png # indicando pasta de imagens 
 
