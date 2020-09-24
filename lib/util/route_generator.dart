@@ -1,6 +1,6 @@
 import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
-// import 'package:FlutterMedia/login.dart';
+import 'package:FlutterMedia/login.dart';
 import 'package:FlutterMedia/screens/welcome.dart';
 
 class RouterGenerator {
@@ -22,11 +22,10 @@ class RouterGenerator {
           builder: (context) => WelcomeScreen(),
         );
 
-      // *ROTA PARA A PAGINA DE LOGIN
-      // case '/login':
-      //   return MaterialPageRoute<dynamic>(
-      //     builder: (context) => Login(),
-      //   );
+      case '/login':
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => Login(),
+        );
       default:
         return _erroRoute();
     }
