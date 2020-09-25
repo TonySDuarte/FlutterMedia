@@ -11,12 +11,10 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 56, 128, 255),
-        body: Padding(
-          padding: EdgeInsets.all(20),
+        body: Container(
+          padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
           child: Center(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
+              child: ListView(
             children: <Widget>[
               Image.asset(
                 'assets/icon/unlock.png',
@@ -27,7 +25,7 @@ class _LoginState extends State<Login> {
                 style: new TextStyle(color: Colors.white, fontSize: 20),
                 decoration: InputDecoration(
                   focusColor: Colors.black12,
-                  labelText: "Email",
+                  labelText: "E-mail",
                   labelStyle: TextStyle(color: Colors.white),
                 ),
               ),
