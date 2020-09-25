@@ -5,11 +5,12 @@ import 'package:page_indicator/page_indicator.dart';
 class WelcomeScreen extends StatelessWidget {
   final PageController _controller = PageController();
 
+  // ignore: close_sinks
   final StreamController<int> currentPage = StreamController.broadcast();
   WelcomeScreen({Key key}) : super(key: key);
 
   void navegarParaLogin(BuildContext context) {
-    Navigator.pushReplacementNamed(context, '/login33');
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override

@@ -1,3 +1,4 @@
+import 'package:FlutterMedia/util/route_generator.dart';
 import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,13 +15,15 @@ class FlutterMedia extends StatelessWidget {
   Widget build(BuildContext context) {
     //tela splash
     return MaterialApp(
-      home: CustomSplash(
-        backGroundColor: Color.fromARGB(255, 56, 128, 255),
-        imagePath: 'assets/icon/camera.png',
-        duration: 2000,
-        home: Login(),
-        type: CustomSplashType.StaticDuration,
-      ),
+      initialRoute: '/',
+      onGenerateRoute: RouterGenerator.generateRoute,
+      // home: CustomSplash(
+      //   backGroundColor: Color.fromARGB(255, 56, 128, 255),
+      //   imagePath: 'assets/icon/camera.png',
+      //   duration: 2000,
+      //   home: Login(),
+      //   type: CustomSplashType.StaticDuration,
+      // ),
     );
   }
 }
