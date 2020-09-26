@@ -17,13 +17,13 @@ class FlutterMedia extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       onGenerateRoute: RouterGenerator.generateRoute,
-      home: CustomSplash(
-        backGroundColor: Color.fromARGB(255, 56, 128, 255),
-        imagePath: 'assets/icon/camera.png',
-        duration: 2000,
-        home: Login(),
-        type: CustomSplashType.StaticDuration,
-      ),
+      // home: CustomSplash(
+      //   backGroundColor: Color.fromARGB(255, 56, 128, 255),
+      //   imagePath: 'assets/icon/camera.png',
+      //   duration: 2000,
+      //   home: Login(),
+      //   type: CustomSplashType.StaticDuration,
+      // ),
     );
   }
 }
