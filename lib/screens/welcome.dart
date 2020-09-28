@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: Material(
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushReplacementNamed(context, '/login');
+                        Navigator.pushReplacementNamed(context, '/initial');
                       },
                       child: const Text(
                         'PULAR',
