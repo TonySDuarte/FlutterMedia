@@ -1,3 +1,4 @@
+import 'package:FlutterMedia/screens/initalPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -45,7 +46,13 @@ class _LoginState extends State<Login> {
               ButtonTheme(
                 height: 60.0,
                 child: RaisedButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InitalPage(),
+                        ))
+                  },
                   child: Text(
                     "Entrar",
                     style: TextStyle(
