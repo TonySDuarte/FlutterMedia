@@ -1,7 +1,6 @@
 import 'package:FlutterMedia/screens/voiceRecognition.dart';
-import 'package:FlutterMedia/util/codigoCamera.dart';
+import 'package:FlutterMedia/screens/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class InitalPage extends StatelessWidget {
   @override
