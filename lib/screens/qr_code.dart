@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 
 // ignore: camel_case_types
@@ -29,65 +27,63 @@ class _QR_codePageState extends State<QR_codePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[300],
-        body: Builder(
-          builder: (BuildContext context) {
-            return ListView(
-              children: <Widget>[
-                _qrCodeWidget(this.bytes, context),
-                Container(
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      TextField(
-                        controller: this._inputController,
-                        keyboardType: TextInputType.url,
-                        textInputAction: TextInputAction.go,
-                        onSubmitted: (value) => _generateBarCode(value),
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.text_fields),
-                          helperText:
-                              'Insira seu código para gerar imagem do codigo QR.',
-                          hintText: 'Por favor insira seu codigo',
-                          hintStyle: TextStyle(fontSize: 15),
-                          contentPadding:
-                              EdgeInsets.symmetric(horizontal: 7, vertical: 15),
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      TextField(
-                        controller: this._outputController,
-                        readOnly: true,
-                        maxLines: 2,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.wrap_text),
-                          helperText:
-                              'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
-                          hintText:
-                              'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
-                          hintStyle: TextStyle(fontSize: 15),
-                          contentPadding:
-                              EdgeInsets.symmetric(horizontal: 7, vertical: 15),
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      this._buttonGroup(),
-                      SizedBox(height: 70),
-                    ],
-                  ),
-                ),
-              ],
-            );
-          },
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => _scanBytes(),
-          tooltip: 'Tire uma foto',
-          child: const Icon(Icons.camera_alt),
-        ),
+    return Scaffold(
+      // home: Scaffold(
+      appBar: AppBar(
+        title: Text("Qr_Code"),
       ),
+      backgroundColor: Colors.grey[300],
+      body: Builder(
+        builder: (BuildContext context) {
+          return ListView(
+            children: <Widget>[
+              _qrCodeWidget(this.bytes, context),
+              Container(
+                color: Colors.white,
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      controller: this._inputController,
+                      keyboardType: TextInputType.url,
+                      textInputAction: TextInputAction.go,
+                      onSubmitted: (value) => _generateBarCode(value),
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.text_fields),
+                        helperText:
+                            'Insira seu código para gerar imagem do codigo QR.',
+                        hintText: 'Por favor insira seu codigo',
+                        hintStyle: TextStyle(fontSize: 15),
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 7, vertical: 15),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    TextField(
+                      controller: this._outputController,
+                      readOnly: true,
+                      maxLines: 2,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.wrap_text),
+                        helperText:
+                            'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
+                        hintText:
+                            'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
+                        hintStyle: TextStyle(fontSize: 15),
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 7, vertical: 15),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    this._buttonGroup(),
+                    SizedBox(height: 70),
+                  ],
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+      // ),
     );
   }
 
@@ -282,14 +278,6 @@ class _QR_codePageState extends State<QR_codePage> {
   // ignore: unused_element
   Future _scanPath(String path) async {
     String barcode = await scanner.scanPath(path);
-    this._outputController.text = barcode;
-  }
-
-  Future _scanBytes() async {
-    // ignore: deprecated_member_use
-    File file = await ImagePicker.pickImage(source: ImageSource.camera);
-    Uint8List bytes = file.readAsBytesSync();
-    String barcode = await scanner.scanBytes(bytes);
     this._outputController.text = barcode;
   }
 
