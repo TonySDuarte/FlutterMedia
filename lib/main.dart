@@ -15,7 +15,7 @@ class FlutterMedia extends StatelessWidget {
   Widget build(BuildContext context) {
     //tela splash
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/codeqr',
       onGenerateRoute: RouterGenerator.generateRoute,
       // home: CustomSplash(
       //   backGroundColor: Color.fromARGB(255, 56, 128, 255),

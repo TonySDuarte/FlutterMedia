@@ -29,11 +29,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/icon/camera.png
-    - assets/icon/unlock.png
-    - assets/img/slide-rescar.png
-    - assets/img/slide-ddd.png
-    - assets/img/slide-flutter.png
-    - assets/img/slide-pronto.png
+    - assets/icon/
+    - assets/img/
     # indicando pasta de imagens 
 

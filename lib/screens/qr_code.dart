@@ -47,8 +47,8 @@ class _QR_codePageState extends State<QR_codePage> {
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.text_fields),
                           helperText:
-                              'Please input your code to generage qrcode image.',
-                          hintText: 'Please Input Your Code',
+                              'Insira seu código para gerar imagem do codigo QR.',
+                          hintText: 'Por favor insira seu codigo',
                           hintStyle: TextStyle(fontSize: 15),
                           contentPadding:
                               EdgeInsets.symmetric(horizontal: 7, vertical: 15),
@@ -62,9 +62,9 @@ class _QR_codePageState extends State<QR_codePage> {
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.wrap_text),
                           helperText:
-                              'The barcode or qrcode you scan will be displayed in this area.',
+                              'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
                           hintText:
-                              'The barcode or qrcode you scan will be displayed in this area.',
+                              'O código de barras ou codigo QR que você digitalizar será exibido nesta área.',
                           hintStyle: TextStyle(fontSize: 15),
                           contentPadding:
                               EdgeInsets.symmetric(horizontal: 7, vertical: 15),
@@ -82,7 +82,7 @@ class _QR_codePageState extends State<QR_codePage> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => _scanBytes(),
-          tooltip: 'Take a Photo',
+          tooltip: 'Tire uma foto',
           child: const Icon(Icons.camera_alt),
         ),
       ),
@@ -101,7 +101,7 @@ class _QR_codePageState extends State<QR_codePage> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   Icon(Icons.verified_user, size: 18, color: Colors.green),
-                  Text('  Generate Qrcode', style: TextStyle(fontSize: 15)),
+                  Text('  Gerar Qrcode', style: TextStyle(fontSize: 15)),
                   Spacer(),
                   Icon(Icons.more_vert, size: 18, color: Colors.black54),
                 ],
@@ -122,7 +122,7 @@ class _QR_codePageState extends State<QR_codePage> {
                     height: 190,
                     child: bytes.isEmpty
                         ? Center(
-                            child: Text('Empty code ... ',
+                            child: Text('Código vazio ... ',
                                 style: TextStyle(color: Colors.black38)),
                           )
                         : Image.memory(bytes),
@@ -136,7 +136,7 @@ class _QR_codePageState extends State<QR_codePage> {
                           flex: 5,
                           child: GestureDetector(
                             child: Text(
-                              'remove',
+                              'remover',
                               style:
                                   TextStyle(fontSize: 15, color: Colors.blue),
                               textAlign: TextAlign.left,
@@ -157,16 +157,15 @@ class _QR_codePageState extends State<QR_codePage> {
                               SnackBar snackBar;
                               if (success) {
                                 snackBar = new SnackBar(
-                                    content:
-                                        new Text('Successful Preservation!'));
+                                    content: new Text('Salvo com sucesso!'));
                                 Scaffold.of(context).showSnackBar(snackBar);
                               } else {
                                 snackBar = new SnackBar(
-                                    content: new Text('Save failed!'));
+                                    content: new Text('Falha ao salvar!'));
                               }
                             },
                             child: Text(
-                              'save',
+                              'salvar',
                               style:
                                   TextStyle(fontSize: 15, color: Colors.blue),
                               textAlign: TextAlign.right,
@@ -184,7 +183,7 @@ class _QR_codePageState extends State<QR_codePage> {
               child: Row(
                 children: <Widget>[
                   Icon(Icons.history, size: 16, color: Colors.black38),
-                  Text('  Generate History',
+                  Text('  Gerar Histórico',
                       style: TextStyle(fontSize: 14, color: Colors.black38)),
                   Spacer(),
                   Icon(Icons.chevron_right, size: 16, color: Colors.black38),
@@ -212,10 +211,10 @@ class _QR_codePageState extends State<QR_codePage> {
                   children: <Widget>[
                     Expanded(
                       flex: 2,
-                      child: Image.asset('images/generate_qrcode.png'),
+                      child: Image.asset('assets/icon/qr-code.png'),
                     ),
                     Divider(height: 20),
-                    Expanded(flex: 1, child: Text("Generate")),
+                    Expanded(flex: 1, child: Text("Gerar")),
                   ],
                 ),
               ),
@@ -233,7 +232,7 @@ class _QR_codePageState extends State<QR_codePage> {
                   children: <Widget>[
                     Expanded(
                       flex: 2,
-                      child: Image.asset('images/scanner.png'),
+                      child: Image.asset('assets/icon/scan.png'),
                     ),
                     Divider(height: 20),
                     Expanded(flex: 1, child: Text("Scan")),
@@ -254,10 +253,10 @@ class _QR_codePageState extends State<QR_codePage> {
                   children: <Widget>[
                     Expanded(
                       flex: 2,
-                      child: Image.asset('images/albums.png'),
+                      child: Image.asset('assets/icon/photo-scan.png'),
                     ),
                     Divider(height: 20),
-                    Expanded(flex: 1, child: Text("Scan Photo")),
+                    Expanded(flex: 1, child: Text("Scan Foto")),
                   ],
                 ),
               ),

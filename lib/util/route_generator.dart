@@ -9,24 +9,24 @@ class RouterGenerator {
     //final args = settings.arguments;
 
     switch (settings.name) {
-      case '/':
-        return MaterialPageRoute<dynamic>(
-            builder: (_) => CustomSplash(
-                  backGroundColor: const Color.fromARGB(255, 56, 128, 255),
-                  imagePath: 'assets/icon/camera.png',
-                  home: WelcomeScreen(),
-                  duration: 2000,
-                  type: CustomSplashType.StaticDuration,
-                ));
-      case '/welcome':
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => WelcomeScreen(),
-        );
+      // case '/':
+      //   return MaterialPageRoute<dynamic>(
+      //       builder: (_) => CustomSplash(
+      //             backGroundColor: const Color.fromARGB(255, 56, 128, 255),
+      //             imagePath: 'assets/icon/camera.png',
+      //             home: WelcomeScreen(),
+      //             duration: 2000,
+      //             type: CustomSplashType.StaticDuration,
+      //           ));
+      // case '/welcome':
+      //   return MaterialPageRoute<dynamic>(
+      //     builder: (context) => WelcomeScreen(),
+      //   );
 
-      case '/login':
-        return MaterialPageRoute<dynamic>(
-          builder: (context) => Login(),
-        );
+      // case '/login':
+      //   return MaterialPageRoute<dynamic>(
+      //     builder: (context) => Login(),
+      //   );
 
       case '/codeqr':
         return MaterialPageRoute<dynamic>(
