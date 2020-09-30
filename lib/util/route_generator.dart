@@ -1,3 +1,4 @@
+import 'package:FlutterMedia/screens/voiceRecognition.dart';
 import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:FlutterMedia/login.dart';
@@ -26,6 +27,10 @@ class RouterGenerator {
       case '/initial':
         return MaterialPageRoute<dynamic>(
           builder: (context) => InitalPage(),
+        );
+      case '/voice':
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => SpeechScreen(),
         );
 
       // *ROTA PARA A PAGINA DE LOGIN
