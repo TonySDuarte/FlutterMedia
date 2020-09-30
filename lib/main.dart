@@ -15,12 +15,8 @@ class FlutterMedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-<<<<<<< HEAD
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-=======
-      initialRoute: '/codeqr',
->>>>>>> scanner_qr
       onGenerateRoute: RouterGenerator.generateRoute,
     );
   }

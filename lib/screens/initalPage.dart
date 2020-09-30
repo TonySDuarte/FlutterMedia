@@ -1,3 +1,4 @@
+import 'package:FlutterMedia/screens/qr_code.dart';
 import 'package:FlutterMedia/screens/voiceRecognition.dart';
 import 'package:FlutterMedia/screens/camera.dart';
 import 'package:flutter/material.dart';
@@ -32,10 +33,13 @@ class InitalPage extends StatelessWidget {
               },
             ),
             new RaisedButton(
-              child: Text("qrCode"),
+              child: Text("        Scanner        "), //gambiarra
               color: Colors.blue,
               textColor: Colors.white,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => QR_codePage()));
+              },
             ),
           ],
         ),

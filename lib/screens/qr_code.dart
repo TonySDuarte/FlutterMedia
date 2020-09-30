@@ -8,11 +8,13 @@ import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:qrscan/qrscan.dart' as scanner;
 
+// ignore: camel_case_types
 class QR_codePage extends StatefulWidget {
   @override
   _QR_codePageState createState() => _QR_codePageState();
 }
 
+// ignore: camel_case_types
 class _QR_codePageState extends State<QR_codePage> {
   Uint8List bytes = Uint8List(0);
   TextEditingController _inputController;
@@ -277,12 +279,14 @@ class _QR_codePageState extends State<QR_codePage> {
     this._outputController.text = barcode;
   }
 
+  // ignore: unused_element
   Future _scanPath(String path) async {
     String barcode = await scanner.scanPath(path);
     this._outputController.text = barcode;
   }
 
   Future _scanBytes() async {
+    // ignore: deprecated_member_use
     File file = await ImagePicker.pickImage(source: ImageSource.camera);
     Uint8List bytes = file.readAsBytesSync();
     String barcode = await scanner.scanBytes(bytes);

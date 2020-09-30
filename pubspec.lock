@@ -90,7 +90,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.11"
-<<<<<<< HEAD
   flutter_svg:
     dependency: "direct main"
     description:
@@ -98,14 +97,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.19.0"
-=======
->>>>>>> scanner_qr
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
   highlight_text:
     dependency: "direct main"
     description:
@@ -113,8 +109,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.2"
-=======
->>>>>>> scanner_qr
   http:
     dependency: transitive
     description:
@@ -129,8 +123,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.4"
-<<<<<<< HEAD
-=======
   image_gallery_saver:
     dependency: "direct main"
     description:
@@ -138,7 +130,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.5.0"
->>>>>>> scanner_qr
   image_picker:
     dependency: "direct main"
     description:
@@ -153,7 +144,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
-<<<<<<< HEAD
   json_annotation:
     dependency: transitive
     description:
@@ -161,8 +151,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.0"
-=======
->>>>>>> scanner_qr
   matcher:
     dependency: transitive
     description:
@@ -191,7 +179,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-<<<<<<< HEAD
   path_drawing:
     dependency: transitive
     description:
@@ -227,21 +214,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-=======
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.9.0"
-  plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: plugin_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.2"
   qrscan:
     dependency: "direct main"
     description:
@@ -249,7 +221,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.17"
->>>>>>> scanner_qr
   sky_engine:
     dependency: transitive
     description: flutter
@@ -327,8 +298,4 @@ packages:
     version: "4.5.1"
 sdks:
   dart: ">=2.9.0-14.0.dev <3.0.0"
-<<<<<<< HEAD
   flutter: ">=1.18.0-6.0.pre <2.0.0"
-=======
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"
->>>>>>> scanner_qr

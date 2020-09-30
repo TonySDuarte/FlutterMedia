@@ -71,6 +71,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
   stt.SpeechToText _speech;
   bool _isListening = false;
   String _text = "Precione o botão e comece a falar";
+  // ignore: unused_field
   double _confidence = 1.0;
 
   @override
