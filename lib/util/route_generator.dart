@@ -2,6 +2,7 @@ import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:FlutterMedia/login.dart';
 import 'package:FlutterMedia/screens/welcome.dart';
+import 'package:FlutterMedia/screens/qr_code.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -26,6 +27,12 @@ class RouterGenerator {
         return MaterialPageRoute<dynamic>(
           builder: (context) => Login(),
         );
+
+      case '/codeqr':
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => QR_codePage(),
+        );
+
       default:
         return _erroRoute();
     }
