@@ -59,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget createWelcomeContainer() {
     return templateWelcomePageView(
         Image.asset(
-          'assets/img/slide-rescar.png',
+          'assets/img/social-media.png',
           height: 200,
         ),
         Text(
