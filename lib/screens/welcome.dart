@@ -78,7 +78,7 @@ class WelcomeScreen extends StatelessWidget {
               TextSpan(
                 text:
                     'é um aplicativo desenvolvido com foco nos recursos de mídia'
-                    ' como projeto pedagógico instituído por Claudio Silva na disciplina de '
+                    ' como projeto pedagógico instituído por Cláudio Silva na disciplina de '
                     ' programação para dispositivos móveis.',
               ),
             ])));

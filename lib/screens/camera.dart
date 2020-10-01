@@ -31,6 +31,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Câmera e Galeria"),
+      ),
       body: Column(
         children: <Widget>[
           Expanded(
@@ -42,15 +45,21 @@ class _HomePageState extends State<HomePage> {
                   ),
           )),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               IconButton(
                 icon: Icon(Icons.camera_alt),
+                iconSize: 42,
+                highlightColor: Colors.blue,
                 onPressed: () {
                   pegarImagemCamera();
                 },
               ),
               IconButton(
                 icon: Icon(Icons.image),
+                iconSize: 42,
+                highlightColor: Colors.blue,
                 onPressed: () {
                   pegarImagemGaleria();
                 },
