@@ -50,7 +50,7 @@ class _LoginState extends State<Login> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => InitalPage(),
+                          builder: (context) => InitialPage(),
                         ))
                   },
                   child: Text(

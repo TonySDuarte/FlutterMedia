@@ -16,7 +16,7 @@ class RouterGenerator {
         return MaterialPageRoute<dynamic>(
             builder: (_) => CustomSplash(
                   backGroundColor: const Color.fromARGB(255, 56, 128, 255),
-                  imagePath: 'assets/icon/camera.png',
+                  imagePath: 'assets/img/social-media.png',
                   home: WelcomeScreen(),
                   duration: 2000,
                   type: CustomSplashType.StaticDuration,
@@ -28,7 +28,7 @@ class RouterGenerator {
 
       case '/initial':
         return MaterialPageRoute<dynamic>(
-          builder: (context) => InitalPage(),
+          builder: (context) => InitialPage(),
         );
       case '/voice':
         return MaterialPageRoute<dynamic>(
