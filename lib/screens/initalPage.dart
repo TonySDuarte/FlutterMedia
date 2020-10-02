@@ -16,10 +16,6 @@ class _InitialPageState extends State<InitialPage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text("Página inicial"),
-        //   backgroundColor: Colors.orange,
-        // ),
         body: GridView.count(
           crossAxisCount: 1,
           padding: EdgeInsets.fromLTRB(0, 110, 0, 0),

@@ -15,45 +15,48 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: <Widget>[
-      PageIndicatorContainer(
-        length: 4,
-        indicatorColor: Colors.grey,
-        indicatorSelectorColor: Colors.blue,
-        padding: const EdgeInsets.only(bottom: 60, top: 40),
-        child: PageView(
-          controller: _controller,
-          onPageChanged: currentPage.add,
-          children: <Widget>[
-            createWelcomeContainer(),
-            createWelcomeFlutterContainer(),
-            createWelcomeDDDContainer(),
-            createWelcomeProntoContainer(context)
-          ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Stack(children: <Widget>[
+        PageIndicatorContainer(
+          length: 4,
+          indicatorColor: Colors.grey,
+          indicatorSelectorColor: Colors.blue,
+          padding: const EdgeInsets.only(bottom: 60, top: 40),
+          child: PageView(
+            controller: _controller,
+            onPageChanged: currentPage.add,
+            children: <Widget>[
+              createWelcomeContainer(),
+              createWelcomeFlutterContainer(),
+              createWelcomeDDDContainer(),
+              createWelcomeProntoContainer(context)
+            ],
+          ),
         ),
-      ),
-      StreamBuilder<int>(
-          initialData: 0,
-          stream: currentPage.stream,
-          builder: (context, snapshot) => snapshot.data < 3
-              ? Positioned(
-                  right: 25,
-                  top: 70,
-                  child: Material(
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.pushReplacementNamed(context, '/login');
-                      },
-                      child: const Text(
-                        'PULAR',
-                        style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
+        StreamBuilder<int>(
+            initialData: 0,
+            stream: currentPage.stream,
+            builder: (context, snapshot) => snapshot.data < 3
+                ? Positioned(
+                    right: 25,
+                    top: 70,
+                    child: Material(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/login');
+                        },
+                        child: const Text(
+                          'PULAR',
+                          style: TextStyle(
+                              color: Colors.blue, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                  ),
-                )
-              : const SizedBox.shrink())
-    ]);
+                  )
+                : const SizedBox.shrink())
+      ]),
+    );
   }
 
   Widget createWelcomeContainer() {
@@ -77,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               TextSpan(
                 text:
-                    'é um aplicativo desenvolvido com foco nos recursos de mídia'
+                    'é um aplicativo desenvolvido em Flutter com foco nos recursos de mídia'
                     ' como projeto pedagógico instituído por Cláudio Silva na disciplina de '
                     ' programação para dispositivos móveis.',
               ),
@@ -112,11 +115,11 @@ class WelcomeScreen extends StatelessWidget {
 
   Widget createWelcomeDDDContainer() => templateWelcomePageView(
         Image.asset(
-          'assets/img/slide-ddd.png',
+          'assets/img/interrogacao.png',
           height: 200,
         ),
         const Text(
-          'O que é DDD?',
+          'O que é faz o FlutterMedia?',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         RichText(
@@ -125,52 +128,47 @@ class WelcomeScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.black, fontSize: 14),
                 children: const [
                   TextSpan(
-                      text: 'DDD ',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  TextSpan(text: 'ou '),
-                  TextSpan(
-                    text: 'Domain-Driven Desing ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  TextSpan(
-                    text: 'é uma abordagem para o desenvolvimento '
-                        'de software onde o domínio de negócio '
-                        'é a peça central.',
+                    text:
+                        'A vigente aplicação dispõe do propósito de transmitir'
+                        ' as funcionalidades básicas de mídia disponíveis no Flutter,'
+                        ' assim como uma pequena parcela de seu potencial.',
                   )
                 ])),
       );
 
   Widget createWelcomeProntoContainer(BuildContext context) =>
       templateWelcomePageView(
-          Image.asset(
-            'assets/img/slide-pronto.png',
-            height: 200,
+        Image.asset(
+          'assets/img/slide-pronto.png',
+          height: 200,
+        ),
+        const Text(
+          'Pronto para continuar?',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+        FlatButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/login');
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'CONTINUAR',
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+              ),
+              Icon(
+                Icons.arrow_forward,
+                color: Colors.blue,
+              ),
+            ],
           ),
-          const Text(
-            'Pronto para continuar?',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          ),
-          FlatButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, '/login');
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  'CONTINUAR',
-                  style: TextStyle(
-                      color: Colors.blue, fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.arrow_forward,
-                  color: Colors.blue,
-                ),
-              ],
-            ),
-          ));
+        ),
+      );
 
-  Widget templateWelcomePageView(Image image, Widget title, Widget content) {
+  Widget templateWelcomePageView(Image image, Widget title, Widget content,
+      [FlatButton flatButton]) {
     return Material(
       child: Container(
         padding: const EdgeInsets.only(left: 25, bottom: 25, right: 25),
